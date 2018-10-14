@@ -1,0 +1,40 @@
+{
+  "name": "bucate-dulci-v0",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/firebase": "^3.2.1",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-redux": "^6.0.9",
+    "@types/redux-logger": "^3.0.6",
+    "firebase": "^5.5.4",
+    "node-sass": "^4.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-redux-firebase": "^2.1.8",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "react-slick": "^0.23.1",
+    "redux": "^4.0.0",
+    "redux-firestore": "^0.5.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

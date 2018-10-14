@@ -1,0 +1,16 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": [],
+    "cliOptions": {
+        "exclude": [
+          "bin",
+          "build",
+          "node_modules"
+        ]
+      }
+}

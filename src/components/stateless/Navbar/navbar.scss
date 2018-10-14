@@ -1,0 +1,15 @@
+.navbar {
+    width: 100%;
+    background-color: cornflowerblue;
+    .navbar-links {
+        display: flex;
+        margin: 15px 0 15px 25px;
+        .link-li{
+            margin-right: 5px;
+            border: 1px solid black;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
