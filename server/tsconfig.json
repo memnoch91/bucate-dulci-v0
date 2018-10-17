@@ -5,6 +5,6 @@
       "sourceMap": true
     },
     "include": [
-      "src/**/*"
+      "src/**/*", "dropbox/dropbox.manager.ts", "slider/slider.router.ts"
     ],
 }

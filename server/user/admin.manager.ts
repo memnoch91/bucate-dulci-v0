@@ -4,7 +4,6 @@ import { AbstractManager } from "../utils/shared/abstract.manager";
 
 /*** INTERFACE ***/
 import { adminSignup } from "./admin.interfaces";
-import { Admin } from "mongodb";
 
 export class AdminManager extends AbstractManager {
   private Admin: Model<IAdmin>;

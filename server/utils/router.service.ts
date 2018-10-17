@@ -1,6 +1,7 @@
 import { Application } from 'express';
 
 import { AdminRouter } from '../user/admin.router';
+import { ImagesRouter } from '../images/img.router';
 
 class RouterService {
 	private app:Application;
@@ -12,6 +13,7 @@ class RouterService {
 
 	private initRouters() {
 		new AdminRouter(this.app);
+		new ImagesRouter(this.app)
 	}
 }
 

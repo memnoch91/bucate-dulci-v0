@@ -39,7 +39,7 @@ class App {
             response.header('Access-Control-Allow-Origin', "*");
             response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
             response.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-
+            response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
             next();
         });
         routerService.setApplication(this.app);
