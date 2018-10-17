@@ -8,11 +8,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
-:global {
-    @import 'node_modules/slick-carousel/slick/_slick.scss';
-    @import 'node_modules/slick-carousel/slick/_slick-theme.scss';
-}
-
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
