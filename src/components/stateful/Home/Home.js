@@ -1,33 +1,43 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 // import PropTypes from 'prop-types'
 
 //Components
-import Layout from '../../stateless/HigherOrderComp/Layout/Layout'
-import Slider from "../Slider/Slider";
+import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
+import Carousel from "../Carousel/Carousel";
 
-//Functions
+//ACTIONS
+import { getSliderImages } from "../../../redux/actions/imgActions";
 
 //CSS
 
-
 export class Home extends Component {
 
-    render() {
-
-        return (
-            <Layout>
-                <Slider/>
-            </Layout>
-        )
+    constructor(props) {
+        super(props);
+        this.props.getSliderImages()
     }
+
+  render() {
+    const { data } = this.props.slider.images;
+    return (
+      <Layout>
+        <Carousel images={data} />
+      </Layout>
+    );
+  }
 }
 
 const mapStateToProps = state => {
-    return {
-        admin: state.admin
-    }
-}
+  return {
+    admin: state.admin,
+    slider: state.slider
+  };
+};
 
-
-export default connect(mapStateToProps, null)(Home)
+export default connect(
+  mapStateToProps,
+  {
+    getSliderImages
+  }
+)(Home);
