@@ -2,7 +2,7 @@ import axios from "axios";
 import { SERVER_URL } from "../../utils/links"
 
 
-export function getSliderImages() {
+export function getMainImages() {
   return dispatch => {
     return axios
       .get(`${SERVER_URL}/api/images`)

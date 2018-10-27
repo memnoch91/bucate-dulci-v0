@@ -29,11 +29,6 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     admin: state.admin
-//   };
-// };
 
 
 export default App;

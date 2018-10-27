@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import './navbar.scss'
 //Components
 
-
-
 function Navbar () {
   return (
     <div className="navbar">

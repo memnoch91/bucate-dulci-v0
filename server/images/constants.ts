@@ -5,5 +5,5 @@ interface IAlbumNames {
 export const imgurUserID:string = '1e030c742a13702'
 
 export const albumNames:IAlbumNames = {
-    sliderAlbum: 'EljpIa8',
+    sliderAlbum: 'erXVlme',
 }

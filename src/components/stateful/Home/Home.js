@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 
 //Components
 import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
-import Carousel from "../Carousel/Carousel";
+import MainContent from "../MainContent/MainContent";
 
 //ACTIONS
-import { getSliderImages } from "../../../redux/actions/imgActions";
+import { getMainImages } from "../../../redux/actions/imgActions";
 
 //CSS
 
@@ -15,14 +15,14 @@ export class Home extends Component {
 
     constructor(props) {
         super(props);
-        this.props.getSliderImages()
+        this.props.getMainImages()
     }
 
   render() {
     const { data } = this.props.slider.images;
     return (
       <Layout>
-        <Carousel images={data} />
+        <MainContent images={data} />
       </Layout>
     );
   }
@@ -38,6 +38,6 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   {
-    getSliderImages
+    getMainImages
   }
 )(Home);

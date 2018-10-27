@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 //Components
 import Layout from '../../stateless/HigherOrderComp/Layout/Layout'
@@ -15,12 +15,12 @@ export class Portfolio extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+// const mapStateToProps = (state) => ({
 
-})
+// })
 
-const mapDispatchToProps = {
+// const mapDispatchToProps = {
 
-}
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Portfolio)
+export default Portfolio;

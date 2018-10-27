@@ -1,0 +1,17 @@
+.products-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 125px auto;
+    .mainContent-tile {
+        margin:  10px;
+    }
+        // .mainContent-tile img {
+        //     width: 510px;
+        // }
+}
+
+// .products-container::after {
+//     content: "";
+//     flex: auto;
+// }
