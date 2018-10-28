@@ -5,31 +5,48 @@ import "./mainContent.scss";
 
 export class MainContent extends Component {
   state = {
-    width: null
+    width: null,
+    liveWidth: null
   };
 
   logWidth = () => {
-    console.log("windowWidth:", this.state.width ? this.state.width : "nada");
+    console.log("windowWidth:", window.innerWidth);
   };
+
+  updateWidth = () => {
+    if (window.innerWidth > 1080) {
+      this.setState({
+        liveWidth: 455
+      })
+    } else {
+      this.setState({
+        liveWidth: window.innerWidth / 1.618
+      })
+    }
+  };
+
+  liveResizle = () => {
+
+    this.updateWidth();
+    this.logWidth();
+    return this.state.liveWidth
+  }
 
   updateToWindowDimmensions = () => {
     this.setState({ width: window.innerWidth });
-    this.logWidth()
   };
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateToWindowDimmensions);
+    window.addEventListener("resize", this.liveResizle);
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateToWindowDimmensions);
+    window.removeEventListener("resize", this.liveResizle);
   }
 
   render() {
-    let windowWidth = this.state.width;
     const styleImage = {
-      styledWidth: `${windowWidth > 1080 ? 405 : windowWidth / 5}px`
-
-    }
+      width: this.state.liveWidth || 455
+    };
     const { images } = this.props;
     const sliderImages = images
       ? images.map(image => (
