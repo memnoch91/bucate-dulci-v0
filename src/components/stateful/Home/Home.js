@@ -19,7 +19,7 @@ export class Home extends Component {
     }
 
   render() {
-    const { data } = this.props.slider.images;
+    const { data } = this.props.mainImages.images;
     return (
       <Layout>
         <MainContent images={data} />
@@ -30,8 +30,7 @@ export class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    admin: state.admin,
-    slider: state.slider
+    mainImages: state.mainImages
   };
 };
 

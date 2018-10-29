@@ -2,7 +2,7 @@ import React from 'react'
 import './layout.scss'
 
 //COMPONENTS
-import Navbar from '../../Navbar/Navbar'
+import Navbar from '../../../stateful/Navbar/Navbar'
 
 
 function Layout(props) {

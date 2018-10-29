@@ -5,6 +5,6 @@
       "sourceMap": true
     },
     "include": [
-      "src/**/*", "dropbox/dropbox.manager.ts", "slider/slider.router.ts", "constants/constants.ts"
+      "src/**/*", "dropbox/dropbox.manager.ts", "slider/slider.router.ts", "constants/constants.ts", "logo/logo.model.ts", "logo/logomodel.ts", "logo/logorouter.ts", "logo/logo.manager.ts", "utils/constants.ts", "constants.ts"
     ],
 }

@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
 
 import adminrReducer from "./adminrReducer";
-import sliderReducer from "./sliderReducer";
+import mainImages from "./mainImages";
+import logoImage from "./logoImage";
 
 
 export default combineReducers({
     admin: adminrReducer,
-    slider: sliderReducer
+    mainImages: mainImages,
+    logoImage: logoImage
 })

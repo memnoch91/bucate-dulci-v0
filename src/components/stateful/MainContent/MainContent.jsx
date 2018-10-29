@@ -6,35 +6,24 @@ import "./mainContent.scss";
 export class MainContent extends Component {
   state = {
     width: null,
-    liveWidth: null
-  };
-
-  logWidth = () => {
-    console.log("windowWidth:", window.innerWidth);
   };
 
   updateWidth = () => {
     if (window.innerWidth > 1080) {
       this.setState({
-        liveWidth: 455
+        width: 455
       })
     } else {
       this.setState({
-        liveWidth: window.innerWidth / 1.618
+        width: window.innerWidth / 1.618
       })
     }
   };
 
   liveResizle = () => {
-
     this.updateWidth();
-    this.logWidth();
-    return this.state.liveWidth
+    return this.state.width
   }
-
-  updateToWindowDimmensions = () => {
-    this.setState({ width: window.innerWidth });
-  };
 
   componentDidMount() {
     window.addEventListener("resize", this.liveResizle);
