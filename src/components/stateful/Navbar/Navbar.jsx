@@ -17,7 +17,6 @@ export class Navbar extends Component {
     const logoObject = this.props.logoImage.logo
       ? this.props.logoImage.logo.data[0]
       : "#";
-    console.log("linkLogo", logoObject);
     return (
       <div className="navbar">
         <div className="navbar-content-container">
@@ -26,16 +25,24 @@ export class Navbar extends Component {
           </div>
           <ul className="navbar-links">
             <li className="link-li">
+              <span className="underline">
               <Link to="/">Home</Link>
+              </span>
             </li>
             <li className="link-li">
+              <span className="underline">
               <Link to="portfolio">Bucatele Noastre</Link>
+              </span>
             </li>
             <li className="link-li">
+              <span className="underline">
               <Link to="about">Despre Noi</Link>
+              </span>
             </li>
             <li className="link-li">
-              <Link to="contact">Contact</Link>
+              <span className="underline">
+                <Link to="contact">Contact</Link>
+              </span>
             </li>
           </ul>
           <div className="after">

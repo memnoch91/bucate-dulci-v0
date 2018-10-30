@@ -20,21 +20,16 @@ export class MainContent extends Component {
     }
   };
 
-  liveResizle = () => {
-    this.updateWidth();
-    return this.state.width
-  }
-
   componentDidMount() {
-    window.addEventListener("resize", this.liveResizle);
+    window.addEventListener("resize", this.updateWidth);
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.liveResizle);
+    window.removeEventListener("resize", this.updateWidth);
   }
 
   render() {
     const styleImage = {
-      width: this.state.liveWidth || 455
+      width: this.state.width || 455
     };
     const { images } = this.props;
     const sliderImages = images

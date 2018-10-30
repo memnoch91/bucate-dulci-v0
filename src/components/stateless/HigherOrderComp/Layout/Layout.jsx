@@ -3,6 +3,7 @@ import './layout.scss'
 
 //COMPONENTS
 import Navbar from '../../../stateful/Navbar/Navbar'
+import Footer from '../../../stateful/Footer/Footer'
 
 
 function Layout(props) {
@@ -10,6 +11,7 @@ function Layout(props) {
     <main className="layout">
       <Navbar />
       {props.children}
+      <Footer />
     </main>
   )
 }

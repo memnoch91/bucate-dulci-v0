@@ -1,12 +1,13 @@
 .products-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 125px auto;
-    @media only screen and (max-width: 1419px) {
+    max-width: 1440px;
+    @media only screen and (max-width: 1280px) {
         flex-flow: column wrap;
     }
     .mainContent-tile {
-        margin:  10px;
+        margin: 12.5px;
     }
 }
