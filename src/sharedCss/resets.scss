@@ -6,7 +6,6 @@
 
 html, body {
     height: 100%;
-    width: 100%;
 }
 
 ul,
@@ -18,4 +17,9 @@ ul li,
 }
 img {
     display: block;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
 }

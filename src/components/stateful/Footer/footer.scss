@@ -1,5 +1,6 @@
 .footer {
   background-color: transparent;
+  flex-shrink: 0;
   .footer-content-container {
     height: 150px;
     max-width: 1440px;
@@ -15,22 +16,34 @@
       display: flex;
       align-items: center;
       flex-basis: 50%;
+      justify-content: center;
       .link-li {
         margin: 0 15px;
-        height: 30px;
+        height: 35px;
         a {
           text-decoration: none;
           color: black;
           font-size: 1.25rem;
+        }
+        .underline {
+          border-bottom: 0px solid transparent;
+          padding-bottom: 2px;
+          transition: border-bottom 0.5s cubic-bezier(0.47, -0.1, 0.49, 1.15);
         }
         .underline:hover {
           border-bottom: 1px solid black;
         }
       }
     }
-
     .footer-icons {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
       flex-basis: 25%;
+      .link-li {
+        margin: 0 3px;
+      }
     }
   }
+
 }

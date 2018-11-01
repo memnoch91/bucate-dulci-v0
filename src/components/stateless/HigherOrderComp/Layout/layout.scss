@@ -1,6 +1,11 @@
+#root{
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
 .layout {
     display: flex;
     flex-flow: column wrap;
-    flex: 1 1 auto;
-    min-height: 100vh;
+    flex: 1 0 auto;
 }
+

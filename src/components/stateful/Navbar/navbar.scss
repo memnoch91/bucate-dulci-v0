@@ -9,7 +9,7 @@
     background-color: transparent;
     .navbar-logo {
       margin: 5px 0;
-      flex-basis: 32.5%;
+      flex-basis: 25%;
     }
     .navbar-logo img {
       width: 155px;
@@ -17,7 +17,8 @@
     .navbar-links {
       display: flex;
       align-items: center;
-      flex-basis: 40%;
+      justify-content: center;
+      flex-basis: 50%;
       .link-li {
         margin: 0 15px;
         height: 35px;
@@ -37,8 +38,8 @@
       }
     }
     .after {
-      flex-basis: 32.5%;
-      content: " "
+      flex-basis: 25%;
+      content: " ";
     }
   }
 }
