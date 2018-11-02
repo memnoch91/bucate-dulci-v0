@@ -7,11 +7,11 @@ import Footer from "../../../stateful/Footer/Footer";
 
 function Layout(props) {
   return (
-    <main className="layout">
+    <div className="layout">
         <Navbar />
         {props.children}
         <Footer />
-    </main>
+    </div>
   );
 }
 

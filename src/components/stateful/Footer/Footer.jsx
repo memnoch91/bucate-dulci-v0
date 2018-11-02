@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { FaceBookIcon, ICON_FB } from "../../stateless/Icons/facebook";
-import { InstagramIcon, ICON_INSTA } from "../../stateless/Icons/instagram";
+import { FaceBookIcon } from "../../stateless/Icons/facebook";
+import { InstagramIcon } from "../../stateless/Icons/instagram";
+import { FBCOLORBRAND, INSTACOLORBRAN, WHITECOLOR, MIDSIZE } from "../../../utils/cssConsts"
 // import { connect } from "react-redux";
 
 //CSS
@@ -13,41 +14,49 @@ export class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer-content-container">
+          {/* FOOTER LEFT */}
           <div className="footer-left">
             <div> </div>
           </div>
+          {/* FOOTER MIDDLE */}
           <ul className="footer-links">
             <li className="link-li">
-              <Link to="/">Comenzi</Link>
-              <span className="underline" />
+              <span className="underline">
+                <Link to="/">Comenzi</Link>
+              </span>
             </li>
             <li className="link-li">
-              <Link to="portfolio">Detalii Comerciale</Link>
-              <span className="underline" />
+              <span className="underline">
+                <Link to="portfolio">Detalii Comerciale</Link>
+              </span>
             </li>
             <li className="link-li">
-              <Link to="about">Formular Feedback</Link>
+              <span className="underline">
+                <Link to="about">Formular Feedback</Link>
+              </span>
             </li>
             <li className="link-li">
-              <Link to="contact">Recomandari</Link>
-              <span className="underline" />
+              <span className="underline">
+                <Link to="contact">Recomandari</Link>
+              </span>
             </li>
           </ul>
+          {/* FOOTER RIGHT */}
           <ul className="footer-icons">
             <li className="link-li">
               <a href="https://www.facebook.com/prajituri.cozonac.decasa/">
                 <FaceBookIcon
-                  size={ICON_FB.SIZES.MED}
-                  color={ICON_FB.COLORS.BRAND}
-                  fontColor={ICON_FB.COLORS.FONT}
+                  size={MIDSIZE}
+                  color={FBCOLORBRAND}
+                  fontColor={WHITECOLOR}
                 />
               </a>
             </li>
             <li className="link-li">
               <a href="https://www.instagram.com/ged_citizen/">
                 <InstagramIcon
-                  size={ICON_INSTA.SIZES.MED}
-                  color={ICON_INSTA.COLORS.BRAND}
+                  size={MIDSIZE}
+                  color={INSTACOLORBRAN}
                 />
               </a>
             </li>

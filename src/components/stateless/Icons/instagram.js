@@ -21,12 +21,3 @@ export const InstagramIcon = ({ color, size }) => (
 		c-7.51,0-13.62-6.109-13.62-13.62V31.624c0-7.51,6.11-13.62,13.62-13.62h26.752c7.511,0,13.62,6.11,13.62,13.62V58.376z"/>
   </svg>
 );
-
-export const ICON_INSTA = {
-  COLORS: {
-    BRAND: "#6A453B",
-  },
-  SIZES: {
-    MED: 25
-  }
-};

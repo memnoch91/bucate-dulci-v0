@@ -5,10 +5,27 @@
     margin: 125px auto;
     max-width: 1440px;
     flex: 1 0 auto;
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: 1440px) {
         flex-flow: column wrap;
     }
     .mainContent-tile {
         margin: 12.5px;
+        position: relative;
     }
+
+    // .mainContent-tile::after {
+    //     content: "test";
+    //     display: block;
+    //     background: transparent;
+    //     border: 3px solid "#FFFFFF";
+    //     width:173px;
+    //     height: 106px;
+    //     color: white;
+    //     font-size: 25px;
+    //     text-align: center;
+    //     line-height: 106px;
+    //     position: absolute;
+    //     top: 200px;
+    //     right: 10px;
+    // }
 }
