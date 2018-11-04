@@ -45,7 +45,7 @@ export class Navbar extends Component {
               </span>
             </li>
           </ul>
-          <div className="after">
+          <div className="navbar-after">
             <div> </div>
           </div>
         </div>

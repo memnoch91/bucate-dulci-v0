@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 //CSS
 import './index.scss';
 import './sharedCss/resets.scss'
-import './sharedCss/stickyFooter.scss'
+import './sharedCss/mainContainer.scss'
 
 //COMPONENTS
 import App from './App';

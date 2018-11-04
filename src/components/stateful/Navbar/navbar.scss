@@ -37,9 +37,27 @@
         }
       }
     }
-    .after {
+    .navbar-after {
       flex-basis: 25%;
       content: " ";
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .navbar {
+    .navbar-content-container {
+      flex-flow: column wrap;
+      .navbar-logo {
+        flex-basis: auto;
+      }
+      .navbar-links {
+        flex-flow: column wrap;
+        flex-basis: auto;
+      }
+      .navbar-after {
+        flex-basis: auto;
+      }
     }
   }
 }

@@ -1,4 +1,8 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: transparent;
   flex-shrink: 0;
   .footer-content-container {
@@ -43,6 +47,25 @@
       flex-basis: 25%;
       .link-li {
         margin: 0 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .footer {
+    position: relative;
+    .footer-content-container {
+      .footer-left {
+        // flex-basis: 1;
+      }
+      .footer-links {
+        flex-flow: column wrap;
+        // flex-basis: 1;
+      }
+      .footer-icons {
+        // flex-basis: 1;
+        justify-content: flex-start;
       }
     }
   }

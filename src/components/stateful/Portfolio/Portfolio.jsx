@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 // import PropTypes from 'prop-types'
-import ReactAux from "../../stateless/HigherOrderComp/ReactAux/ReactAux";
+//ACTIONS
+import { getMainImages } from "../../../redux/actions/imgActions";
+
+//CSS
 import "./portfolio.scss";
-import TextBox from "../../stateless/TextBox/TextBox"
+
+// import ReactAux from "../../stateless/HigherOrderComp/ReactAux/ReactAux";
+import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
 
 export class Portfolio extends Component {
   state = {
@@ -29,8 +36,23 @@ export class Portfolio extends Component {
   }
 
   render() {
-    return <main className="portfolio-container">BelishSpermezeu </main>;
+    return (
+      <Layout>
+        <main className="portfolio-container">BelishSpermezeu </main>
+      </Layout>
+    );
   }
 }
 
-export default Portfolio;
+const mapStateToProps = state => {
+  return {
+    mainImages: state.mainImages
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {
+    getMainImages
+  }
+)(Portfolio);

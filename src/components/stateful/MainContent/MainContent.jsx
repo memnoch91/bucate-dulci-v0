@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 // import PropTypes from 'prop-types'
-import ReactAux from "../../stateless/HigherOrderComp/ReactAux/ReactAux";
+
+//ACTIONS
+import { getMainImages } from "../../../redux/actions/imgActions";
+//CSS
 import "./mainContent.scss";
-import TextBox from "../../stateless/TextBox/TextBox"
+
+import ReactAux from "../../stateless/HigherOrderComp/ReactAux/ReactAux";
+import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
+import TextBox from "../../stateless/TextBox/TextBox";
 
 export class MainContent extends Component {
   state = {
@@ -22,7 +29,11 @@ export class MainContent extends Component {
   };
 
   componentDidMount() {
+    this.props.getMainImages();
     window.addEventListener("resize", this.updateWidth);
+    if(window.innerWidth < 1440) {
+      this.updateWidth()
+    }
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateWidth);
@@ -38,17 +49,17 @@ export class MainContent extends Component {
       border: "3px solid #FFFFFF",
       width: 173,
       height: 106,
-      color:" #FFFFFF",
+      color: " #FFFFFF",
       fontSize: 25,
       textAlign: "center",
       lineHeight: 106,
       position: "absolute",
       top: 200,
       right: 10
-    }
-    const { images } = this.props;
-    const sliderImages = images
-      ? images.map((image) => (
+    };
+    const { data } = this.props.mainImages.images;
+    const sliderImages = data
+      ? data.map(image => (
           <ReactAux>
             <div className="mainContent-tile" key={image.id}>
               <img
@@ -56,13 +67,30 @@ export class MainContent extends Component {
                 alt={`${image.id}`}
                 style={styleImage}
               />
-            <TextBox  css={styleTextBox} text={image.id} key={image.link}/>
+              <TextBox css={styleTextBox} text={image.id} key={image.link} />
             </div>
           </ReactAux>
         ))
       : null;
-    return <main className="products-container">{sliderImages} </main>;
+    return (
+      <Layout>
+        <main className="main-container">
+          <div className="tile-products-container">{sliderImages}</div>
+        </main>
+      </Layout>
+    );
   }
 }
 
-export default MainContent;
+const mapStateToProps = state => {
+  return {
+    mainImages: state.mainImages
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {
+    getMainImages
+  }
+)(MainContent);
