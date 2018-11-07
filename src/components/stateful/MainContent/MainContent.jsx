@@ -12,12 +12,13 @@ import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
 import TextBox from "../../stateless/TextBox/TextBox";
 
 export class MainContent extends Component {
+
   state = {
     width: null
   };
 
   updateWidth = () => {
-    if (window.innerWidth > 1080) {
+    if (window.innerWidth > 1440) {
       this.setState({
         width: 455
       });

@@ -1,0 +1,13 @@
+.portfolio-banner {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  background: url("https://i.imgur.com/c7hW5L6.jpg") center no-repeat;
+}
+.portfolio-banner::before {
+  content: "Asortate";
+  color: white;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+}

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 // import PropTypes from 'prop-types'
 //ACTIONS
-import { getMainImages } from "../../../redux/actions/imgActions";
+import { getPortfolioImages } from "../../../redux/actions/portfolioActions";
 
 //CSS
 import "./portfolio.scss";
@@ -12,33 +12,31 @@ import "./portfolio.scss";
 import Layout from "../../stateless/HigherOrderComp/Layout/Layout";
 
 export class Portfolio extends Component {
-  state = {
-    width: null
-  };
 
-  updateWidth = () => {
-    if (window.innerWidth > 1080) {
-      this.setState({
-        width: 455
-      });
-    } else {
-      this.setState({
-        width: window.innerWidth / 1.618
-      });
-    }
-  };
+
 
   componentDidMount() {
-    window.addEventListener("resize", this.updateWidth);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWidth);
+    this.props.getPortfolioImages();
   }
 
+
   render() {
+    const images = this.props.portfolioImages;
+    const card = images ? images.map(image => (
+      <div>
+        {`${image.link}`}
+      </div>
+    )) : null;
     return (
       <Layout>
-        <main className="portfolio-container">BelishSpermezeu </main>
+        <main className="portfolio-container">
+          <section className="portfolio-asortate">
+          <div className="portfolio-banner" title="Asortate"></div>
+          <div className="container-images-asortate">
+            {card}
+          </div>
+          </section>
+         </main>
       </Layout>
     );
   }
@@ -46,13 +44,13 @@ export class Portfolio extends Component {
 
 const mapStateToProps = state => {
   return {
-    mainImages: state.mainImages
+    portfolioImages: state.portfolioImages.images.data
   };
 };
 
 export default connect(
   mapStateToProps,
   {
-    getMainImages
+    getPortfolioImages
   }
 )(Portfolio);
