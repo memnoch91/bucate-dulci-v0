@@ -12,7 +12,7 @@ import "./footer.scss";
 export class Footer extends Component {
   render() {
     return (
-      <div className="footer">
+      <footer className="footer">
         <div className="footer-content-container">
           {/* FOOTER LEFT */}
           <div className="footer-left">
@@ -68,7 +68,7 @@ export class Footer extends Component {
             </li>
           </ul>
         </div>
-      </div>
+      </footer>
     );
   }
 }

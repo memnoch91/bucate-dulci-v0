@@ -75,7 +75,7 @@ export class MainContent extends Component {
       : null;
     return (
       <Layout>
-        <main className="main-container">
+        <main className="main-container expand">
           <div className="tile-products-container">{sliderImages}</div>
         </main>
       </Layout>

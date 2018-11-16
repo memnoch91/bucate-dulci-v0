@@ -18,7 +18,7 @@ export class Navbar extends Component {
       ? this.props.logoImage.logo.data[0]
       : "#";
     return (
-      <div className="navbar">
+      <header className="navbar">
         <div className="navbar-content-container">
           <div className="navbar-logo">
             <img src={`${logoObject.link}`} alt={`${logoObject.id}`} />
@@ -49,7 +49,7 @@ export class Navbar extends Component {
             <div> </div>
           </div>
         </div>
-      </div>
+      </header>
     );
   }
 }

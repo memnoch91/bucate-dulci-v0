@@ -22,14 +22,17 @@ export class Portfolio extends Component {
 
   render() {
     const images = this.props.portfolioImages;
+    const description = this.props.portfolioImages ? this.props.portfolioImages[0].description : null;
+    const descJSON = JSON.parse(description);
+    console.log(descJSON);
     const card = images ? images.map(image => (
-      <div>
-        {`${image.link}`}
+      <div key={`${image.id}`}>
+        <img src={`${image.link}`} alt={`${image.title}`}  className="card"/>
       </div>
     )) : null;
     return (
       <Layout>
-        <main className="portfolio-container">
+        <main className="portfolio-container expand">
           <section className="portfolio-asortate">
           <div className="portfolio-banner" title="Asortate"></div>
           <div className="container-images-asortate">
